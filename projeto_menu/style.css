@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background-color: #f3f4f6;
+}
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    padding: 32px 16px;
+    background-color: #173f5f;
+    color: white;}
+    .logo{
+        display: inline-block;
+        margin-bottom: 24px;
+        color: white;
+    /* "Reutilizar código não significa nunca alterar nada. A estrutura continua a mesma, mas 
+    podemos ajustar o espaçamento e o tamanho da área clicável para que o
+    menu lateral fique confortável de usar." */
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navegacao ul {
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin: 32px 0 0;
+padding: 0;
+list-style: none;
+}
+.navegacao a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+.navegacao a:hover {
+    background-color: #2f80a8;
+}
+main{
+    margin-left: 240px;
+}
+.secao {
+    min-height: 70vh;
+    padding: 64px 32px;
+
+}
+.secao h1, 
+.secao h2 {
+    color: #173f5f;
+}
