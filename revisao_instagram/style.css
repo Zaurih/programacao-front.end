@@ -1,0 +1,85 @@
+body{
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 16px;
+    font-family: system-ui, sans-serif;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 4px;
+}
+.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== AULA 2: MOSAICO ===== */
+.galeria {
+    grid-auto-flow: dense;
+}
+.grande {
+    grid-column: spam 2;
+    grid-row: span 2;
+}
+.alta{
+    grid-row: span 2;
+}
+.larga{
+    grid-column: span 2;
+}
+
+/* ===== AULA 3: CABEÇALHO DO PERFIL ===== */
+.perfil {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+        "avatar nome"
+        "avatar numeros"
+        "avatar bio";
+    column-gap: 40PX;
+    row-gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.avatar  { grid-area: avatar; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; justify-self: center; }
+.nome    { grid-area: nome; display: flex; align-items: center; gap: 16px; }
+.numeros { grid-area: numeros; display: flex; gap: 32px; list-style: none; padding: 0; }
+.bio     { grid-area: bio; margin: 0; }
+
+.nome h1 { margin: 0; font-size: 1.5rem; font-weight: 500; }
+.seguir  { background: #5b3df5; color: white; border: none; border-radius: 8px; padding: 8px 20px; font-weight: bold; cursor: pointer; }
+
+
+/* ===== AULA 3: DESTAQUES ===== */
+.destaques {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 80px;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.destaque {
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.destaque img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #ff4f7b;
+    object-fit: cover;
+}
